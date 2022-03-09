@@ -179,13 +179,13 @@ while True:
     available = [str(num) for num in range(0,10)] # a List Comprehension
     # available ➡ "0 1 2 3 4 5 6 7 8 9"
     
-    print("\n1 = player vs computer \n")
-    print("2 = player vs player \n")
-    print("3 = computer vs computer \n")
-    mode = int(input("Select an option 1, 2, or 3: "))
+    print("\n0 = player vs computer \n")
+    print("1 = player vs player \n")
+    print("2 = computer vs computer \n")
+    mode = int(input("Select an option 0, 1, or 2: "))
     
     # Mode for player vs computer
-    if mode == 1:
+    if mode == 0:
         p1_name = input("Enter NAME of player who will go against the computer: ").capitalize()
         p2_name = "Bob"
         # Asking Choices Printing choices➡ X or O
@@ -194,7 +194,7 @@ while True:
         print(f"\n{p2_name}:", p2_choice)
 
     # Mode for player vs player
-    elif mode == 2:
+    elif mode == 1:
         # Asking Names
         p1_name, p2_name = names()
         # Asking Choices Printing choices➡ X or O
