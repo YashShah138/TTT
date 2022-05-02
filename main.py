@@ -1,23 +1,22 @@
-####	Tic-Tac-Toe with AI  ####
+####	Tic-Tac-Toe For CB Create Task  ####
 
-# Functions
+# Functions	
 def default():
     # Display welcome message
     print("Welcome! Let's play TIC-TAC-TOE \n")
 
-def rules():
-    print("The 3 x 3 board will look like: \n")
+def setup():
+    print("The tic tac toe board will look like this: \n")
     print(" 1 | 2 | 3 ")
     print("-----------")
     print(" 4 | 5 | 6 ")
     print("-----------")
     print(" 7 | 8 | 9 \n")
-    #print("The positions of this 3 x 3 board is same as the right side of your key board.\n")
     print("You just have to Enter the position(1-9).")
 
 def play():
-    # Asking if the user is ready
-    return input("Are you ready to play the game? Enter [Y]es or [N]o: ").upper().startswith('Y')
+    # Ask if the user is ready to play
+    return input("Are you ready to play the game? Enter [y]es or [n]o: ").lower().startswith("y")
 
 def names():
     # Input players names
@@ -34,16 +33,15 @@ def choice():
     while p1_choice != "X" or p1_choice != "O":           
         # while loop body begins
         p1_choice = input(f"\n{p1_name}, Do you want to be x or o?: ")[0].upper()
-        # The input above has [0].upper() in the end,
-        # So even if user enters x, X, xxxx or XXX the input will always be taken as X.
-        # Hence, increasing the user input window.
+        # The input above has [0].upper() in the end
+				# Even if user enters x, X, xxxx or XXX the input will always be taken as X.
 
         if p1_choice == "X" or p1_choice == "O":
-            # if entered value is X or O, end the loop.
+            # If entered value is X or O, end the loop.
             break
-        print("INVALID INPUT! Please Try Again!") 
-        # if the entered value isn't X or O, restart the while loop.
-        # while loop body begins
+        print("Invalid input! Please try again!") 
+        # If the entered value isn't X or O, restart the while loop.
+        # While loop body begins
         
     # Assigning the value to p2 and then diplaying the values
     if p1_choice == "X":
@@ -160,13 +158,13 @@ def delay(mode):
 
 def replay():
     # If the users want to play the game again?
-    return input("Do you want to play again? Enter [Y]es or [N]o: ").lower().startswith("y")
+    return input("Do you want to play again? Enter [Y]es or [N]o: ").upper().startswith("Y")
 
 
 # Main Program begins
 input("Press ENTER to start \n")
 default()
-rules()
+setup()
 
 #####################################
 
